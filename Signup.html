@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+            padding: 0;
+            margin: 0;
+        }
+
+        .header {
+            background-color: azure;
+            height: 16vh;
+            position: relative;
+        }
+
+        .schoolname {
+            font-weight: bold;
+            font-size: 38px;
+            color: navy;
+            font-family: Stencil Std, fantasy;
+            position: relative;
+            top: 1vh;
+            letter-spacing: 1px;
+        }
+
+        .schoollogo {
+            float: left;
+            padding: 0 1vh 0 0;
+            margin: 0;
+        }
+
+        .bnhsnav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            z-index: 4;
+        }
+
+        .bnhsnav a {
+            color: hsl(0, 6%, 58%);
+            text-align: center;
+            text-decoration: none;
+            padding: 2vh;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .bnhsnav a:hover {
+            color: navy;
+            text-decoration: underline;
+            text-decoration-color: gold;
+            text-decoration-thickness: 0.6vh;
+            text-underline-offset: 2px;
+        }
+
+        .bnhsnav li {
+            float: left;
+        }
+
+        .aboutusbutton {
+            border: none;
+            background-color: azure;
+        }
+
+        .Login {
+            position: absolute;
+            right: 7vh;
+            bottom: 9vh;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+            padding: 7px 5px 7px 40px;
+            color: hsl(61, 91%, 59%);
+            background-color: lightblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .Login1 a:hover {
+            background-color: hsl(240, 100%, 20%);
+        }
+
+        .Login1 a:visited {
+            color: hsl(0, 0%, 50%);
+        }
+
+        .Signup {
+            position: absolute;
+            bottom: 9vh;
+            right: 17vh;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+            padding: 7px 5px 7px 5px;
+            font-weight: bold;
+            font-size: 20px;
+            color: gold;
+            background-color: navy;
+        }
+
+        .Signup1 a:hover {
+            background-color: hsl(240, 100%, 20%);
+        }
+
+        .Signup1 a:visited {
+            color: gold;
+        }
+
+        .homebutton {
+            border: none;
+            background-color: azure;
+        }
+
+        .coursesbutton{
+            border: none;
+            background-color: azure;
+        }
+
+        .contactsbutton{
+            border: none;
+            background-color: azure;
+        }
+
+        .coursesdropdown li{
+            float: none;
+            z-index: 999;
+            min-width: none;
+            max-width: none;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="schoollogo.png" class="schoollogo" width="100">
+        <span class="schoolname">Bacoor National <br> High School-Main</span>
+        <nav class="bnhsnav">
+            <ul>
+                <li><button class="homebutton"><a href="index.html">Home</a></button></li>
+                <li><button class="aboutusbutton"><a href="About Us.html">About Us</a></button></li>
+                <li><button class="coursesbutton"><a href="Courses.html">Courses</a></button></li>
+                <li><button class="contactsbutton"><a href="Contacts.html">Contacts</a></button></li>
+            </ul>
+        </nav>
+        <div class="Login1">
+            <a href="Login.html" class="Login">Log-in</a>
+        </div>
+        <div class="Signup1">
+            <a href="Signup.html" class="Signup">Get Started!</a>
+        </div>
+        </div>
+    </header>
+
+    <main>
+        
+    </main>
+
+</body>
+</html>
