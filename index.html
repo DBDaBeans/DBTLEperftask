@@ -1,158 +1,220 @@
 <!DOCTYPE html>
- <html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: beige;
+            padding: 0;
+            margin: 0;
+        }
 
-    <head>
-        <title>
-            Bacoor National Highschool Main Home Page
-        </title>
-        <meta charset="UTF-8">
-        <style>
-            body {
-                background-color: beige;
-                position: absolute;
-                z-index: -2;
-                height: 100%;
-                width: 100%;
+        .header {
+            background-color: azure;
+            height: 16vh;
+            position: relative;
+        }
+
+        .schoolname {
+            font-weight: bold;
+            font-size: 5vh;
+            color: navy;
+            font-family: Stencil Std, fantasy;
+            position: relative;
+            top: 1vh;
+            letter-spacing: 1px;
+        }
+
+        .schoollogo {
+            float: left;
+            padding: 0 1vh 0 0;
+            margin: 0;
+        }
+
+        .bnhsnav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            left: 45%;
+            z-index: 4;
+        }
+
+        .bnhsnav a {
+            color: hsl(0, 6%, 58%);
+            text-align: center;
+            text-decoration: none;
+            padding: 2vh;
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .bnhsnav a:hover {
+            color: navy;
+            text-decoration: underline;
+            text-decoration-color: gold;
+            text-decoration-thickness: 0.6vh;
+            text-underline-offset: 2px;
+        }
+
+        .bnhsnav li {
+            float: left;
+        }
+
+        .aboutusbutton {
+            border: none;
+            background-color: azure;
+        }
+
+        .Login {
+            position: absolute;
+            right: 7vh;
+            bottom: 9vh;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+            padding: 7px 5px 7px 40px;
+            color: hsl(61, 91%, 59%);
+            background-color: lightblue;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .Login1 a:hover {
+            background-color: hsl(240, 100%, 20%);
+        }
+
+        .Login1 a:visited {
+            color: hsl(0, 0%, 50%);
+        }
+
+        .Signup {
+            position: absolute;
+            bottom: 9vh;
+            right: 17vh;
+            text-decoration: none;
+            border: none;
+            border-radius: 20px;
+            padding: 7px 5px 7px 5px;
+            font-weight: bold;
+            font-size: 20px;
+            color: gold;
+            background-color: navy;
+        }
+
+        .Signup1 a:hover {
+            background-color: hsl(240, 100%, 20%);
+        }
+
+        .Signup1 a:visited {
+            color: gold;
+        }
+
+        .homebutton {
+            border: none;
+            background-color: azure;
+        }
+
+        .coursesbutton{
+            border: none;
+            background-color: azure;
+        }
+
+        .contactsbutton{
+            border: none;
+            background-color: azure;
+        }
+
+        .coursesdropdown li{
+            float: none;
+            z-index: 999;
+            min-width: none;
+            max-width: none;
+        }
+
+        .aboutus {
+                display: inline-block;
             }
 
-            #schoolpic {
-                position: absolute;
-                top: 125px;
-                left: 30px;
-            }
-
-            .navmenu {
-                position: absolute;
-                top: -10px;
-                left: -10px;
+            .aboutus button {
                 background-color: azure;
-                height: 110px;
-                width: 100%;
-                z-index: -1;
-            }
-
-            .navigation {
-                font-family: arial;
-            }
-
-            .navigation ul{
+                color: hsl(0, 6%, 58%);
+                padding: 10px 10px;
+                border: none;
+                cursor: pointer;
                 position: absolute;
-                top: 52px;
-                left: 425px;
-                list-style-type: none;
-                background-color: rgb(77, 74, 74);
-                z-index: 100;
-                padding: 0px;
-                margin: 0px;
-                overflow: hidden;
+                top: 33%;
+                left: 52%;
+                font-size: 3vh;
+                z-index: 9;
             }
 
-            .navigation a {
-                color: white;
-                text-decoration: none;
-                padding: 15px 50px 15px 50px;
-                border: solid 1px;
-
+            .aboutus a {
                 display: block;
-                text-align: center;
-            }
-
-            .navigation a:hover {
-                background-color: hsl(0, 0%, 10%);
-            }
-
-            .navigation li {
-                float: left;
-            }
-
-            #mag {
-                position: absolute;
-                top: 70px;
-                right: 25px;
-            }
-
-            #maginput {
-                position: absolute;
-                top: 65px;
-                right: 75px;
-                width: 130px;
-            }
-
-            #topnameofschool {
-                position: absolute;
-                top: -20px;
-                left: 110px;
-                font-family: Stencil Std, fantasy;
-                font-size: 38px;
-                color: navy;
-                letter-spacing: 2px;
-            }
-
-            #schoolquote {
-                position: absolute;
-                top: 100px;
-                right: 300px;
-                font-family: Snell Roundhand, cursive;
-            }
-
-            #currentpage {
-                color: gold;
-                font-weight: bold;
-            }
-
-            .login {
-                position: absolute;
-                top: 0px;
-                right: 42px;
-                border: solid;
-                color: white;
-                background-color: lightblue;
-                border-color: lightblue;
-                border-radius: 35px;
-                padding: 7px;
-                padding-left: 15px;
+                color: hsl(0, 6%, 58%);
                 text-decoration: none;
+                padding: 10px 15px;
             }
 
-            .signup {
+            .aboutus .aboutusdropdown {
+                display: none;
                 position: absolute;
-                top: 0px;
-                right: 100px;
-                border: solid;
-                color: white;
-                background-color: navy;
-                border-color: navy;
-                border-radius:35px;
-                padding: 7px;
-                text-decoration: none;
+                top: 85%;
+                right: 10%;
+                background-color: azure;
+                min-width: none;
+                z-index: 10;
             }
 
-            #heart {
-                color: red;
+            .aboutus:hover {
+                border-bottom: 5px yellow;
             }
-        </style>
-        <link rel="icon" type="image/jpg" href="schoollogo.jpg">
-    </head>
 
-    <body>
-        <div class="navmenu">
-            <img src="schoollogo.png" alt="school logo" height="100px">
-            <button id="mag" onclick="document.getElementById('maginput').value = ''"><img src="Magniflying glass.png" height="20"></button>
-            <h1 id="topnameofschool">Bacoor National <br>Highschool-Main</h1>
-        </div>
-        <nav class="navigation">
+            .aboutus:hover .aboutusdropdown {
+                display: block;
+            }
+
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <img src="schoollogo.png" class="schoollogo" width="100">
+        <span class="schoolname">Bacoor National <br> High School-Main</span>
+        <nav>
+        <div  class="bnhsnav">
             <ul>
-                <li><a href="index.html" id="currentpage">Home</a></li>
-                <li><a href="About Us.html">About Us</a></li>
-                <li><a href="Courses.html">Courses</a></li>
-                <li><a href="Contacts.html">Contacts</a></li>
+                <li><button class="homebutton"><a href="index.html">Home</a></button></li>
+                <li><button class="aboutusbutton"><a href="About Us.html">About Us</a></button></li>
+                <li><button class="coursesbutton"><a href="Courses.html">Courses</a></button></li>
+                <li><button class="contactsbutton"><a href="Contacts.html">Contacts</a></button></li>
             </ul>
-        </nav>
-        <h1 id="schoolquote">"I <span id="heart">&hearts;</span> BNHS MAIN"</h1>
-        <img id="schoolpic" src="Schoolpic.png" width="500px">
-        <input id="maginput" placeholder="Search" type="search" title="Explore the BNHS-Main official website!">
-        <h3><a href="login.html" class="login">Login</a></h3>
-        <h3><a href="Signup.html" class="signup">Get Started!</a></h3>
-    </body>
+        </div>
 
- </html>
+        <div class="aboutus">
+            <button><a href="About Us.html">About Us</a></button>
+            <div class="aboutusdropdown" >
+                <a href="" style="color:black">An educational institution formerly known as Bacoor Municipal High School<br> (Padre Mariano Gomez National High School) estabished in 1972 whose buildings<br> grew in number and population of students grew larger. Bacoor National High School<br> and its annexes transformed itself into a recognized school in the town of Bacoor.<br> It still continues to operate as of today.<br><br><b>The School Logo</b></a>
+                <img src="schoollogo.png" width="200">
+            </div>
+        </div>
+        </nav>
+
+        <div class="Login1">
+            <a href="Login.html" class="Login">Log-in</a>
+        </div>
+        <div class="Signup1">
+            <a href="Signup.html" class="Signup">Get Started!</a>
+        </div>
+    </header>
+
+    <main>
+        
+    </main>
+
+</body>
+</html>
